@@ -2834,6 +2834,7 @@ GameObject:
   - component: {fileID: 8103705316961350934}
   - component: {fileID: 269284967222613939}
   - component: {fileID: 767110863852454653}
+  - component: {fileID: 3304759973662119284}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2859,7 +2860,7 @@ Transform:
   - {fileID: 219695636367028216}
   - {fileID: 7104108579965549539}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &269284967222613939
 MonoBehaviour:
@@ -2886,3 +2887,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <InputReader>k__BackingField: {fileID: 269284967222613939}
+--- !u!95 &3304759973662119284
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880524109790621612}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e857feca91d55e46b3671e05709860d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
