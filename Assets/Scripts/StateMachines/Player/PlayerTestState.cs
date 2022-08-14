@@ -18,7 +18,10 @@ public class PlayerTestState : PlayerBaseState
         movement.y = 0;
         movement.z = stateMachine.InputReader.MovementValue.y;
 
-        stateMachine.transform.Translate(movement * deltaTime);
+        stateMachine.Controller.Move(movement * deltaTime * stateMachine.FreeLookMovementSpeed);
+
+        if (stateMachine.InputReader.MovementValue == Vector2.zero) { return; }
+        stateMachine.transform.rotation = Quaternion.LookRotation(movement);
     }
 
     public override void Exit()
