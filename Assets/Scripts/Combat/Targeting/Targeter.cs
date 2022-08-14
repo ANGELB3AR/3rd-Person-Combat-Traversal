@@ -8,9 +8,7 @@ public class Targeter : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Target target = other.GetComponent<Target>();
-
-        if (target != null)
+        if (other.TryGetComponent<Target>(out Target target))
         {
             targets.Add(target);
         }
@@ -18,9 +16,7 @@ public class Targeter : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        Target target = other.GetComponent<Target>();
-
-        if (target != null)
+        if (other.TryGetComponent<Target>(out Target target))
         {
             targets.Remove(target);
         }
