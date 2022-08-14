@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerTargetingState : PlayerBaseState
 {
+    readonly int targetingBlendTreeHash = Animator.StringToHash("TargetingBlendTree");
+
     public PlayerTargetingState(PlayerStateMachine stateMachine) : base(stateMachine) {}
 
     public override void Enter()
     {
         stateMachine.InputReader.CancelEvent += OnCancel;
+
+        stateMachine.Animator.Play(targetingBlendTreeHash);
     }
 
     public override void Tick(float deltaTime)
