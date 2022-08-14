@@ -23,5 +23,7 @@ public abstract class PlayerBaseState : State
 
         Vector3 lookDirection = target.transform.position - stateMachine.transform.position;
         lookDirection.y = 0f;
+
+        stateMachine.transform.rotation = Quaternion.LookRotation(lookDirection);
     }
 }
