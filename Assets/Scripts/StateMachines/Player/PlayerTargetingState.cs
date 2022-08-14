@@ -8,16 +8,21 @@ public class PlayerTargetingState : PlayerBaseState
 
     public override void Enter()
     {
-        
-    }
-
-    public override void Exit()
-    {
-        
+        stateMachine.InputReader.CancelEvent += OnCancel;
     }
 
     public override void Tick(float deltaTime)
     {
         
+    }
+
+    public override void Exit()
+    {
+        stateMachine.InputReader.CancelEvent -= OnCancel;
+    }
+
+    void OnCancel()
+    {
+        stateMachine.SwitchState(new PlayerFreeLookState(stateMachine));
     }
 }
