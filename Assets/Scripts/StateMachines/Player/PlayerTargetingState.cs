@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class PlayerTargetingState : PlayerBaseState
 {
-    public PlayerTargetingState(PlayerStateMachine stateMachine) : base(stateMachine)
-    {
-    }
+    public PlayerTargetingState(PlayerStateMachine stateMachine) : base(stateMachine) {}
 
     public override void Enter()
     {
