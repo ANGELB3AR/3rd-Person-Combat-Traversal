@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Targeter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] List<Target> targets = new List<Target>();
+
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.GetComponent<Target>() != null)
+        {
+            targets.Add(other.GetComponent<Target>());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit(Collider other)
     {
-        
+        if (other.GetComponent<Target>() != null)
+        {
+            targets.Remove(other.GetComponent<Target>());
+        }
     }
 }
