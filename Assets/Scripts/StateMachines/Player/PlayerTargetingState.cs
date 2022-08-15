@@ -77,6 +77,5 @@ public class PlayerTargetingState : PlayerBaseState
             float value = stateMachine.InputReader.MovementValue.x > 0 ? 1f : -1f;
             stateMachine.Animator.SetFloat(targetingRightHash, value, 0.1f, deltaTime);
         }
-
     }
 }
