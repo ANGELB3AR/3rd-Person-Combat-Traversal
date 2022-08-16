@@ -13,4 +13,6 @@ public class Attack
     [field: SerializeField] public int ComboStateIndex { get; private set; } = -1;
     [Tooltip("How far into combo player must attack again for it to combo")]
     [field: SerializeField] public float ComboAttackTime { get; private set; }
+    [field: SerializeField] public float ForceTime { get; private set; }
+    [field: SerializeField] public float Force { get; private set; }
 }
