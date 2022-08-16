@@ -24,7 +24,6 @@ public class PlayerAttackingState : PlayerBaseState
         FaceTarget();
 
         float normalizedTime = GetNormalizedTime();
-        previousFrameTime = normalizedTime;
 
         if (normalizedTime > previousFrameTime && normalizedTime < 1f)
         {
@@ -44,7 +43,7 @@ public class PlayerAttackingState : PlayerBaseState
         
     }
 
-    private void TryComboAttack(float normalizedTime)
+    void TryComboAttack(float normalizedTime)
     {
         if (attack.ComboStateIndex == -1) { return; }
 

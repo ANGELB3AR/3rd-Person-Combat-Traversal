@@ -5,8 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class Attack
 {
+    [Tooltip("Name of attack animation")]
     [field: SerializeField] public string AnimationName { get; private set; }
+    [Tooltip("How long Animator has to blend into animation")]
     [field: SerializeField] public float TransitionDuration { get; private set; }
+    [Tooltip("Which attack is next in combo")]
     [field: SerializeField] public int ComboStateIndex { get; private set; } = -1;
+    [Tooltip("How far into combo player must attack again for it to combo")]
     [field: SerializeField] public float ComboAttackTime { get; private set; }
 }
