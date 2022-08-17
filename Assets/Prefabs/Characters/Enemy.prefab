@@ -551,8 +551,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2519619128474511208}
   - component: {fileID: 5325278375884801316}
+  - component: {fileID: 3919801260722606556}
   - component: {fileID: 6707120389039480987}
   - component: {fileID: 6391153655206811272}
+  - component: {fileID: 5872151382182229360}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -597,6 +599,26 @@ CharacterController:
   m_SkinWidth: 0.03
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &3919801260722606556
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263184690529515296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6707120389039480987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -622,6 +644,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &5872151382182229360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263184690529515296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8041c75973d835943a6c2eb890161458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3282601926289771139
 GameObject:
   m_ObjectHideFlags: 0
