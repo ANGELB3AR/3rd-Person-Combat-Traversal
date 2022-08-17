@@ -28,8 +28,8 @@ public class WeaponDamage : MonoBehaviour
         }
     }
 
-    public void SetAttack(int attackDamage)
+    public void SetAttack(int damage)
     {
-        damage = attackDamage;
+        this.damage = damage;
     }
 }
