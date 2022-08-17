@@ -550,11 +550,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2519619128474511208}
+  - component: {fileID: 5872151382182229360}
   - component: {fileID: 5325278375884801316}
   - component: {fileID: 3919801260722606556}
   - component: {fileID: 6707120389039480987}
   - component: {fileID: 6391153655206811272}
-  - component: {fileID: 5872151382182229360}
+  - component: {fileID: 800305682332227160}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -581,6 +582,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5872151382182229360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3263184690529515296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8041c75973d835943a6c2eb890161458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Animator>k__BackingField: {fileID: 3919801260722606556}
+  <Controller>k__BackingField: {fileID: 5325278375884801316}
+  <ForceReceiver>k__BackingField: {fileID: 800305682332227160}
+  <PlayerChaseRange>k__BackingField: 10
 --- !u!143 &5325278375884801316
 CharacterController:
   m_ObjectHideFlags: 0
@@ -609,7 +626,7 @@ Animator:
   m_GameObject: {fileID: 3263184690529515296}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3a0212941748d14aba0fcc667958a9f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -644,7 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
---- !u!114 &5872151382182229360
+--- !u!114 &800305682332227160
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -653,9 +670,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3263184690529515296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8041c75973d835943a6c2eb890161458, type: 3}
+  m_Script: {fileID: 11500000, guid: f65395ec5d7a7964e8b14402a44cd8f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 5325278375884801316}
+  drag: 0.2
 --- !u!1 &3282601926289771139
 GameObject:
   m_ObjectHideFlags: 0
