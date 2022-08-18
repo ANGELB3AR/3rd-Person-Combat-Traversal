@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,10 +26,17 @@ public class EnemyChasingState : EnemyBaseState
             return;
         }
 
+        MoveToPlayer(deltaTime);
+
         stateMachine.Animator.SetFloat(speedHash, 1f, animatorDampTime, deltaTime);
     }
 
     public override void Exit()
+    {
+        
+    }
+
+    void MoveToPlayer(float deltaTime)
     {
         
     }
