@@ -29,4 +29,14 @@ public abstract class EnemyBaseState : State
     {
         Move(Vector3.zero, deltaTime);
     }
+
+    protected void FacePlayer()
+    {
+        if (stateMachine.Player == null) { return; }
+
+        Vector3 lookDirection = stateMachine.Player.transform.position - stateMachine.transform.position;
+        lookDirection.y = 0f;
+
+        stateMachine.transform.rotation = Quaternion.LookRotation(lookDirection);
+    }
 }
