@@ -8,7 +8,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public Animator Animator { get; private set; }
     [field: SerializeField] public CharacterController Controller { get; private set; }
     [field: SerializeField] public ForceReceiver ForceReceiver { get; private set; }
-    [field: SerializeField] public NavMeshAgent NavMeshAgent { get; private set; }
+    [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public float MovementSpeed { get; private set; }
     [field: SerializeField] public float PlayerChaseRange { get; private set; }
     
@@ -18,8 +18,8 @@ public class EnemyStateMachine : StateMachine
     {
         Player = GameObject.FindGameObjectWithTag("Player");
 
-        NavMeshAgent.updatePosition = false;
-        NavMeshAgent.updateRotation = false;
+        Agent.updatePosition = false;
+        Agent.updateRotation = false;
 
         SwitchState(new EnemyIdleState(this));
     }

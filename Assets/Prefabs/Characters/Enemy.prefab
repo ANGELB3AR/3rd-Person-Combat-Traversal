@@ -598,7 +598,8 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 3919801260722606556}
   <Controller>k__BackingField: {fileID: 5325278375884801316}
   <ForceReceiver>k__BackingField: {fileID: 800305682332227160}
-  <NavMeshAgent>k__BackingField: {fileID: 1532181322474783051}
+  <Agent>k__BackingField: {fileID: 1532181322474783051}
+  <MovementSpeed>k__BackingField: 3
   <PlayerChaseRange>k__BackingField: 10
 --- !u!143 &5325278375884801316
 CharacterController:
