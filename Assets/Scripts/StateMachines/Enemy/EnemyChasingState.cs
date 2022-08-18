@@ -52,7 +52,7 @@ public class EnemyChasingState : EnemyBaseState
         stateMachine.Agent.velocity = stateMachine.Controller.velocity;
     }
 
-    private bool IsInAttackRange()
+    bool IsInAttackRange()
     {
         float distanceToPlayer = Vector3.Distance(stateMachine.Player.transform.position, stateMachine.transform.position);
         return distanceToPlayer <= stateMachine.AttackRange;
