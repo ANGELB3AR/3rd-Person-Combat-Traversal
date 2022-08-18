@@ -25,7 +25,7 @@ public class EnemyChasingState : EnemyBaseState
             return;
         }
 
-        stateMachine.Animator.SetFloat(speedHash, 1, animatorDampTime, deltaTime);
+        stateMachine.Animator.SetFloat(speedHash, 1f, animatorDampTime, deltaTime);
     }
 
     public override void Exit()
