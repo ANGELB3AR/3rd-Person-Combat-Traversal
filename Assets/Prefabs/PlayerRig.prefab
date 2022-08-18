@@ -278,7 +278,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4685032732598492838}
-  m_LocalRotation: {x: 0.059429735, y: -0.000028500528, z: 0.0000016967778, w: 0.99823254}
+  m_LocalRotation: {x: 0.059429735, y: -0.000028491939, z: 0.0000016962665, w: 0.99823254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1164,6 +1164,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 4685032733196091376}
     m_Modifications:
+    - target: {fileID: 767110863852454653, guid: e372674ab3c3a3440bc9d7a0e198a1ec, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[0].<Knockback>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 767110863852454653, guid: e372674ab3c3a3440bc9d7a0e198a1ec, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[1].<Knockback>k__BackingField
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 767110863852454653, guid: e372674ab3c3a3440bc9d7a0e198a1ec, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[2].<Knockback>k__BackingField
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3423429066994685502, guid: e372674ab3c3a3440bc9d7a0e198a1ec, type: 3}
       propertyPath: targetGroup
       value: 

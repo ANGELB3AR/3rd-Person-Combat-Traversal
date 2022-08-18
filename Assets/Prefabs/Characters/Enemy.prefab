@@ -689,6 +689,7 @@ MonoBehaviour:
   <PlayerChaseRange>k__BackingField: 10
   <AttackRange>k__BackingField: 1.5
   <AttackDamage>k__BackingField: 20
+  <AttackKnockback>k__BackingField: 10
 --- !u!143 &5325278375884801316
 CharacterController:
   m_ObjectHideFlags: 0
@@ -765,6 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5325278375884801316}
+  agent: {fileID: 1532181322474783051}
   drag: 0.2
 --- !u!195 &1532181322474783051
 NavMeshAgent:
