@@ -13,6 +13,8 @@ public class Health : MonoBehaviour
     int health;
     bool isInvulnerable;
 
+    public bool isDead => health == 0;
+
     void Start()
     {
         health = maxHealth;
