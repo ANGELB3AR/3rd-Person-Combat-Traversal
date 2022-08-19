@@ -7,7 +7,7 @@ public class EnemyImpactState : EnemyBaseState
     readonly int impactHash = Animator.StringToHash("Impact");
 
     const float crossFadeDuration = 0.1f;
-    float duration = 1f;
+    float duration = 1.5f;
 
     public EnemyImpactState(EnemyStateMachine stateMachine) : base(stateMachine) { }
 

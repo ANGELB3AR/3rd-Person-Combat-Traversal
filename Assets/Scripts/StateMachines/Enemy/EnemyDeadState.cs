@@ -8,13 +8,12 @@ public class EnemyDeadState : EnemyBaseState
 
     public override void Enter()
     {
-
+        // Toggle ragdoll
+        stateMachine.Weapon.gameObject.SetActive(false);
+        GameObject.Destroy(stateMachine.target);
     }
 
-    public override void Tick(float deltaTime)
-    {
-
-    }
+    public override void Tick(float deltaTime) { }
 
     public override void Exit() { }
 }

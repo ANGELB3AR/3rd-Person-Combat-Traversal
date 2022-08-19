@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     [SerializeField] int maxHealth = 100;
 
     public event Action OnTakeDamage;
+    public event Action OnDie;
 
     int health;
 
@@ -25,5 +26,10 @@ public class Health : MonoBehaviour
         OnTakeDamage?.Invoke();
 
         Debug.Log(health);
+
+        if (health == 0)
+        {
+            OnDie?.Invoke();
+        }
     }
 }

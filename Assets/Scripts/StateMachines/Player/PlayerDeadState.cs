@@ -8,13 +8,11 @@ public class PlayerDeadState : PlayerBaseState
 
     public override void Enter()
     {
-        
+        // Toggle ragdoll
+        stateMachine.Weapon.gameObject.SetActive(false);
     }
 
-    public override void Tick(float deltaTime)
-    {
-        
-    }
+    public override void Tick(float deltaTime) { }
 
     public override void Exit() { }
 }

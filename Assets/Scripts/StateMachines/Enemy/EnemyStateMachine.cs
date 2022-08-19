@@ -11,6 +11,7 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField] public NavMeshAgent Agent { get; private set; }
     [field: SerializeField] public WeaponDamage Weapon { get; private set; }
     [field: SerializeField] public Health Health { get; private set; }
+    [field: SerializeField] public Target target { get; private set; }
     [field: SerializeField] public float MovementSpeed { get; private set; }
     [field: SerializeField] public float PlayerChaseRange { get; private set; }
     [field: SerializeField] public float AttackRange { get; private set; }
@@ -32,16 +33,23 @@ public class EnemyStateMachine : StateMachine
     void OnEnable()
     {
         Health.OnTakeDamage += HandleTakeDamage;
+        Health.OnDie += HandleDeath;
     }
 
     void OnDisable()
     {
         Health.OnTakeDamage -= HandleTakeDamage;
+        Health.OnDie -= HandleDeath;
     }
 
     void HandleTakeDamage()
     {
         SwitchState(new EnemyImpactState(this));
+    }
+
+    void HandleDeath()
+    {
+        SwitchState(new EnemyDeadState(this));
     }
 
     void OnDrawGizmosSelected()
