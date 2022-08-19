@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
     public event Action OnDie;
 
     int health;
+    bool isInvulnerable;
 
     void Start()
     {
@@ -20,6 +21,8 @@ public class Health : MonoBehaviour
     public void DealDamage(int damage)
     {
         if (health == 0) { return; }
+
+        if (isInvulnerable) { return; }
 
         health = Mathf.Max(health - damage, 0);
 
@@ -31,5 +34,10 @@ public class Health : MonoBehaviour
         {
             OnDie?.Invoke();
         }
+    }
+
+    public void SetInvulnerable(bool isInvulnerable)
+    {
+        this.isInvulnerable = isInvulnerable;
     }
 }
