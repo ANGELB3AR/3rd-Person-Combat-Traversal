@@ -3981,6 +3981,7 @@ MonoBehaviour:
   <Weapon>k__BackingField: {fileID: 5808137222920558708}
   <Health>k__BackingField: {fileID: 2286676628785823827}
   <Ragdoll>k__BackingField: {fileID: 6872075614050646892}
+  <LedgeDetector>k__BackingField: {fileID: 5369776005919383474}
   <FreeLookMovementSpeed>k__BackingField: 6
   <TargetingMovementSpeed>k__BackingField: 5
   <RotationDamping>k__BackingField: 10
