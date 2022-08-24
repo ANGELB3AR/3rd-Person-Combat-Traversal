@@ -19,6 +19,8 @@ public class PlayerJumpingState : PlayerBaseState
 
         momentum = stateMachine.Controller.velocity;
         momentum.y = 0f;
+
+        stateMachine.LedgeDetector.OnLedgeDetect += HandleLedgeDetect;
     }
 
     public override void Tick(float deltaTime)
@@ -34,5 +36,13 @@ public class PlayerJumpingState : PlayerBaseState
         FaceTarget();
     }
 
-    public override void Exit() { }
+    public override void Exit() 
+    {
+        stateMachine.LedgeDetector.OnLedgeDetect -= HandleLedgeDetect;
+    }
+
+    void HandleLedgeDetect(Vector3 ledgeForward)
+    {
+        stateMachine.SwitchState(new PlayerHangingState(stateMachine, ledgeForward));
+    }
 }
