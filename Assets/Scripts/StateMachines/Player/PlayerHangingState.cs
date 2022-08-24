@@ -29,6 +29,10 @@ public class PlayerHangingState : PlayerBaseState
             stateMachine.ForceReceiver.Reset();
             stateMachine.SwitchState(new PlayerFallingState(stateMachine));
         }
+        else if (stateMachine.InputReader.MovementValue.y > 0f)
+        {
+            stateMachine.SwitchState(new PlayerPullUpState(stateMachine));
+        }
     }
 
     public override void Exit() { }
