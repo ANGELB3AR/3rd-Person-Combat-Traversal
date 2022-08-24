@@ -18,7 +18,7 @@ public class PlayerPullUpState : PlayerBaseState
 
     public override void Tick(float deltaTime)
     {
-        if (stateMachine.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1) { return; }
+        if (GetNormalizedTime(stateMachine.Animator, "Climbing") < 1) { return; }
 
         stateMachine.Controller.enabled = false;
         stateMachine.transform.Translate(offset, Space.Self);
